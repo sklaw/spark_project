@@ -4,6 +4,8 @@ import os
 
 import random
 
+data_dir_path = '/home/sklaw/Desktop/experiment/spark/ex/3/v1/data/'
+
 def map_yearmonth(raw):
     year = int(raw[:4])
     month = int(raw[4:])
@@ -88,7 +90,7 @@ def output_by_station(elem):
     
     if key[4] == 1:
         for i in range(5):
-            path = r"/home/sklaw/Desktop/experiment/spark/ex/3/v1/timePredictor/data/v0/"+key[0]+'/'+str(i+1);
+            path = data_dir_path+"v0/"+key[0]+'/'+str(i+1);
             if not os.path.exists(path):
                 os.makedirs(path)
         
@@ -101,14 +103,14 @@ def output_by_station(elem):
             
                     
     elif key[4] == 6:
-        path = r"/home/sklaw/Desktop/experiment/spark/ex/3/v1/timePredictor/data/v0/"+key[0]+'/6';
+        path = data_dir_path+"v0/"+key[0]+'/6';
         if not os.path.exists(path):
             os.makedirs(path)
         day = 4
         fake_data(year, month, day, data_list, path)
     
     elif key[4] == 7:
-        path = r"/home/sklaw/Desktop/experiment/spark/ex/3/v1/timePredictor/data/v0/"+key[0]+'/7';
+        path = data_dir_path+"v0/"+key[0]+'/7';
         if not os.path.exists(path):
             os.makedirs(path)
         day = 5
@@ -161,7 +163,7 @@ conf = SparkConf().setMaster("localhost")
 
 sc = SparkContext("local[*]", "data_transformer")
 
-file_data = sc.textFile(r"/home/sklaw/Desktop/experiment/spark/ex/3/v1/timePredictor/data/2014 October OD Quarter Hour.csv")
+file_data = sc.textFile(data_dir_path+"2014 October OD Quarter Hour.csv")
 
 header = file_data.first()
 

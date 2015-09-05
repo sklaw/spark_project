@@ -9,10 +9,10 @@ import datetime
 
 import getDistance 
 
-
+data_dir_path = '/home/sklaw/Desktop/experiment/spark/ex/3/v1/data/'
 
 def get_possible_days(year, month, day, station):
-    base_path = r"/home/sklaw/Desktop/experiment/spark/ex/3/v1/timePredictor/data/v0/"
+    base_path = data_dir_path+r"v0/"
     import datetime
     wday = datetime.date(year, month, day).weekday()+1
     files = os.listdir(base_path+station+'/'+str(wday)) 
