@@ -1,0 +1,662 @@
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Rosslyn', 23]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Silver Spring', 70]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53], [u'Rhode Island Avenue', 58], [u'Brookland', 60], [u'Fort Totten', 63], [u'Takoma', 65], [u'Silver Spring', 70]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Farragut North', 41]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Southern Avenue', 56]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46], [u'Navy Yard', 48], [u'Anacostia', 51], [u'Congress Heights', 54], [u'Southern Avenue', 56]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Smithsonian', 37]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Dunn Loring', 3]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Congress Heights', 54]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46], [u'Navy Yard', 48], [u'Anacostia', 51], [u'Congress Heights', 54]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Waterfront', 46]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Gallery Place-Chinatown', 41]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Virginia Square-GMU', 17]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Braddock Road', 43]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36], [u'Reagan Washington National Airport', 38], [u'Braddock Road', 43]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'East Falls Church', 11]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Capitol South', 43]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Naylor Road', 59]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46], [u'Navy Yard', 48], [u'Anacostia', 51], [u'Congress Heights', 54], [u'Southern Avenue', 56], [u'Naylor Road', 59]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Van Dorn Street', 50]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36], [u'Reagan Washington National Airport', 38], [u'Braddock Road', 43], [u'King Street', 45], [u'Van Dorn Street', 50]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Cleveland Park', 47]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Court House', 20]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Arlington Cemetery', 30]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Pentagon', 33]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Union Station', 47]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Reagan Washington National Airport', 38]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36], [u'Reagan Washington National Airport', 38]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Forest Glen', 74]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53], [u'Rhode Island Avenue', 58], [u'Brookland', 60], [u'Fort Totten', 63], [u'Takoma', 65], [u'Silver Spring', 70], [u'Forest Glen', 74]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Anacostia', 51]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46], [u'Navy Yard', 48], [u'Anacostia', 51]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Largo Town Center', 68]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory']]
+**********
+blue [[u'Stadium-Armory', 53], [u'Benning Road', 56], [u'Capitol Heights', 59], [u'Addison Road', 62], [u'Morgan Blvd.', 65], [u'Largo Town Center', 68]]
+ 
+ 
+--------------------
+['Vienna', 0] -> ['Vienna', 0]
+**********
+orange [['Vienna', 0]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Glenmont', 80]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53], [u'Rhode Island Avenue', 58], [u'Brookland', 60], [u'Fort Totten', 63], [u'Takoma', 65], [u'Silver Spring', 70], [u'Forest Glen', 74], [u'Wheaton', 77], [u'Glenmont', 80]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Archives-Navy Memorial', 45]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon']]
+**********
+yellow [[u'Pentagon', 38], [u"L'Enfant Plaza", 43], [u'Archives-Navy Memorial', 45]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Potomac Avenue', 47]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'College Park-U of MD', 68]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51], [u'Columbia Heights', 53], [u'Georgia Avenue-Petworth', 56], [u'Fort Totten', 59], [u'West Hyattsville', 62], [u"Prince George's Plaza", 65], [u'College Park-U of MD', 68]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u"L'Enfant Plaza", 39]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Clarendon', 18]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Greenbelt', 71]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51], [u'Columbia Heights', 53], [u'Georgia Avenue-Petworth', 56], [u'Fort Totten', 59], [u'West Hyattsville', 62], [u"Prince George's Plaza", 65], [u'College Park-U of MD', 68], [u'Greenbelt', 71]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'West Falls Church', 7]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Branch Avenue', 64]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46], [u'Navy Yard', 48], [u'Anacostia', 51], [u'Congress Heights', 54], [u'Southern Avenue', 56], [u'Naylor Road', 59], [u'Suitland', 61], [u'Branch Avenue', 64]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Brookland', 60]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53], [u'Rhode Island Avenue', 58], [u'Brookland', 60]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Foggy Bottom', 26]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Minnesota Avenue', 52]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory', 48], [u'Minnesota Avenue', 52]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Federal Triangle', 35]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Federal Center SW', 41]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'New Carrollton', 69]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory', 48], [u'Minnesota Avenue', 52], [u'Deanwood', 54], [u'Cheverly', 56], [u'Landover', 63], [u'New Carrollton', 69]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Friendship Heights', 53]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Huntington', 55]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36], [u'Reagan Washington National Airport', 38], [u'Braddock Road', 43], [u'King Street']]
+**********
+yellow [[u'King Street', 50], [u'Eisenhower Avenue', 52], [u'Huntington', 55]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Woodley Park-Zoo', 45]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Crystal City', 36]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'White Flint', 64]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53], [u'Bethesda', 55], [u'Medical Center', 58], [u'Grosvenor', 61], [u'White Flint', 64]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Grosvenor', 61]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53], [u'Bethesda', 55], [u'Medical Center', 58], [u'Grosvenor', 61]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Addison Road', 62]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory']]
+**********
+blue [[u'Stadium-Armory', 53], [u'Benning Road', 56], [u'Capitol Heights', 59], [u'Addison Road', 62]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Takoma', 65]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53], [u'Rhode Island Avenue', 58], [u'Brookland', 60], [u'Fort Totten', 63], [u'Takoma', 65]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'West Hyattsville', 62]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51], [u'Columbia Heights', 53], [u'Georgia Avenue-Petworth', 56], [u'Fort Totten', 59], [u'West Hyattsville', 62]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Bethesda', 55]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53], [u'Bethesda', 55]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Shady Grove', 73]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53], [u'Bethesda', 55], [u'Medical Center', 58], [u'Grosvenor', 61], [u'White Flint', 64], [u'Twinbrook', 67], [u'Rockville', 70], [u'Shady Grove', 73]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u"Prince George's Plaza", 65]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51], [u'Columbia Heights', 53], [u'Georgia Avenue-Petworth', 56], [u'Fort Totten', 59], [u'West Hyattsville', 62], [u"Prince George's Plaza", 65]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Rhode Island Avenue', 58]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53], [u'Rhode Island Avenue', 58]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Judiciary Square', 45]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Georgia Avenue-Petworth', 56]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51], [u'Columbia Heights', 53], [u'Georgia Avenue-Petworth', 56]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Stadium-Armory', 48]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory', 48]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Eastern Market', 45]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Van Ness-UDC', 49]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Capitol Heights', 59]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory']]
+**********
+blue [[u'Stadium-Armory', 53], [u'Benning Road', 56], [u'Capitol Heights', 59]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Rockville', 70]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53], [u'Bethesda', 55], [u'Medical Center', 58], [u'Grosvenor', 61], [u'White Flint', 64], [u'Twinbrook', 67], [u'Rockville', 70]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'New York Ave', 53]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Fort Totten', 59]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51], [u'Columbia Heights', 53], [u'Georgia Avenue-Petworth', 56], [u'Fort Totten', 59]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Shaw-Howard University', 49]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Columbia Heights', 53]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51], [u'Columbia Heights', 53]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Suitland', 61]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46], [u'Navy Yard', 48], [u'Anacostia', 51], [u'Congress Heights', 54], [u'Southern Avenue', 56], [u'Naylor Road', 59], [u'Suitland', 61]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Ballston', 15]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Eisenhower Avenue', 52]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36], [u'Reagan Washington National Airport', 38], [u'Braddock Road', 43], [u'King Street']]
+**********
+yellow [[u'King Street', 50], [u'Eisenhower Avenue', 52]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Pentagon City', 34]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Metro Center', 34]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Wheaton', 77]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown', 41], [u'Judiciary Square', 45], [u'Union Station', 47], [u'New York Ave', 53], [u'Rhode Island Avenue', 58], [u'Brookland', 60], [u'Fort Totten', 63], [u'Takoma', 65], [u'Silver Spring', 70], [u'Forest Glen', 74], [u'Wheaton', 77]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Tenleytown-AU', 51]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Deanwood', 54]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory', 48], [u'Minnesota Avenue', 52], [u'Deanwood', 54]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Medical Center', 58]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53], [u'Bethesda', 55], [u'Medical Center', 58]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Navy Yard', 48]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza"]]
+**********
+green [[u"L'Enfant Plaza", 44], [u'Waterfront', 46], [u'Navy Yard', 48]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Morgan Blvd.', 65]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory']]
+**********
+blue [[u'Stadium-Armory', 53], [u'Benning Road', 56], [u'Capitol Heights', 59], [u'Addison Road', 62], [u'Morgan Blvd.', 65]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Mt. Vernon Square-UDC', 48]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Dupont Circle', 43]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'McPherson Square', 30]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Landover', 63]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory', 48], [u'Minnesota Avenue', 52], [u'Deanwood', 54], [u'Cheverly', 56], [u'Landover', 63]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Benning Road', 56]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory']]
+**********
+blue [[u'Stadium-Armory', 53], [u'Benning Road', 56]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Farragut West', 28]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Twinbrook', 67]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Farragut North', 41], [u'Dupont Circle', 43], [u'Woodley Park-Zoo', 45], [u'Cleveland Park', 47], [u'Van Ness-UDC', 49], [u'Tenleytown-AU', 51], [u'Friendship Heights', 53], [u'Bethesda', 55], [u'Medical Center', 58], [u'Grosvenor', 61], [u'White Flint', 64], [u'Twinbrook', 67]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Cheverly', 56]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center', 34], [u'Federal Triangle', 35], [u'Smithsonian', 37], [u"L'Enfant Plaza", 39], [u'Federal Center SW', 41], [u'Capitol South', 43], [u'Eastern Market', 45], [u'Potomac Avenue', 47], [u'Stadium-Armory', 48], [u'Minnesota Avenue', 52], [u'Deanwood', 54], [u'Cheverly', 56]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'U Street-Cardozo', 51]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn', 23], [u'Foggy Bottom', 26], [u'Farragut West', 28], [u'McPherson Square', 30], [u'Metro Center']]
+**********
+red [[u'Metro Center', 39], [u'Gallery Place-Chinatown']]
+**********
+green [[u'Gallery Place-Chinatown', 46], [u'Mt. Vernon Square-UDC', 48], [u'Shaw-Howard University', 49], [u'U Street-Cardozo', 51]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'King Street', 45]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36], [u'Reagan Washington National Airport', 38], [u'Braddock Road', 43], [u'King Street', 45]]
+ 
+ 
+--------------------
+['Vienna', 0] -> [u'Franconia-Springfield', 57]
+**********
+orange [['Vienna', 0], [u'Dunn Loring', 3], [u'West Falls Church', 7], [u'East Falls Church', 11], [u'Ballston', 15], [u'Virginia Square-GMU', 17], [u'Clarendon', 18], [u'Court House', 20], [u'Rosslyn']]
+**********
+blue [[u'Rosslyn', 28], [u'Arlington Cemetery', 30], [u'Pentagon', 33], [u'Pentagon City', 34], [u'Crystal City', 36], [u'Reagan Washington National Airport', 38], [u'Braddock Road', 43], [u'King Street', 45], [u'Van Dorn Street', 50], [u'Franconia-Springfield', 57]]
