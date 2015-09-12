@@ -27,19 +27,25 @@ def get_twined_day(year, month, day, station, sc):
     
     now = datetime.datetime.now()
     
+    twined_day = None
+    min_distance = None
+    
     to_print = []
     
     #if year == now.year and month == now.month and day == now.day:
     if True:
         real_time_data = stream_handler.root.get_ent_data(station)
-
-        
-
         for i in possible_days:
             distance =  getDistance.cmp_two_days(real_time_data , i, sc)
-            to_print.append((i.split('/')[-1], distance));
+            to_print.append([i.split('/')[-1], distance])
+            if min_distance == None or distance < min_distance:
+                twined_day = i.split('/')[-1]
+                min_distance = distance
+
+    else:
+        twined_day = possible_days[-1]
+        
+    return (twined_day, to_print)
 
     
-    return to_print
     
-    #return possible_days[0]

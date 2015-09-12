@@ -75,7 +75,7 @@ def try_match(day1, day2):
         oc.plot([j for j in range(length)], [j[1] for j in day1[now_x1:now_x1+length]], "-",\
                 [j for j in range(length)], [j[1] for j in day2[now_x2:now_x2+length]], "-")
                 
-        #print "day1["+str(x1)+"+"+str(i)+"] cmp to day2["+str(x2)+"]"        
+        print "day1["+str(x1)+"+"+str(i)+"] cmp to day2["+str(x2)+"]"        
         oc.title("offset="+str(i)+" distance="+str(a))
         oc.legend('day1','day2')
         #print '*'*10

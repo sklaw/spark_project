@@ -117,18 +117,16 @@ def output_by_station(elem):
         f = open(path+'/'+filename, 'a')
         
         for k in data_list:
-            s = ','.join([l for l in k])
+            s = ','.join([str(l) for l in k])
             f.write(s+'\n')
         f.close()
             
-    if key[4] == 1:
+    elif key[4] == 1:
         for i in range(5):
             path = data_dir_path+"v0/"+key[0]+'/'+str(i+1);
             if not os.path.exists(path):
                 os.makedirs(path)
-        
-            
-            
+
             begin_day = [6, 7, 1, 2, 3]
             
             day = begin_day[i]
@@ -150,7 +148,13 @@ def output_by_station(elem):
         fake_data(year, month, day, data_list, path)
         
 def fake_data(year, month, day, data_list, path):
+    global dont_fake
     while day <= 31:
+        if (year, month, day) in dont_fake:
+            day += 7
+            continue
+        
+        
         filename = str(year)+'-'+str(month)+'-'+str(day)
                 
         day += 7
@@ -161,8 +165,8 @@ def fake_data(year, month, day, data_list, path):
     
         #k is a tuple
         for k in data_list:
-            vibration_1 = random.uniform(0.8, 1.2)
-            vibration_2 = vibration_1*random.uniform(0.9, 1.1)
+            vibration_1 = random.uniform(0.9, 1.1)
+            vibration_2 = vibration_1
             
             hour = k[1]/100
             minute = k[1]%100+offset
