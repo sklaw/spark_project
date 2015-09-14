@@ -70,9 +70,6 @@ def map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pair
         data = list(item[1])
         
         C1_delay_pair_dict = {}
-        
-
-        
         for i in destinations_by_directions:
             direction = i[0]
             destinations = i[1]
@@ -84,9 +81,7 @@ def map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pair
                 continue      
             C1 = reduce(lambda a,b: a+b, C1)
             C1_delay_pair_dict[direction][0] = C1
-            
-            
-            
+ 
             delay = []
             filtered_pure_routes_ext_stations = [j for j in pure_routes_pairs.keys() if j in destinations]
             for j in data:
@@ -99,21 +94,8 @@ def map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pair
                 continue      
             delay = reduce(lambda a,b: (a+b)/2, delay)
             
-            
             C1_delay_pair_dict[direction][1] = delay
-        
-        '''
-        if time not in record_dict.keys():
-            record_dict[time] = {}
-        
-        for i in C1_delay_pair_dict.keys():
-            if i not in record_dict[time].keys():
-                record_dict[time][i] = []
-            record_dict[time][i].append(C1_delay_pair_dict[i])
-        '''
-        
-        return (time,C1_delay_pair_dict)
-                  
+        return (time,C1_delay_pair_dict)     
     return func
 
 #pure routes means the routes that havn't interchanged lines.
@@ -134,11 +116,7 @@ def analyse_one_day(station_name, path, record_dict):
         return
     
     destinations_by_directions = station_info['destinations_by_directions']
-    
     routes = list(routes_similar_to_google_map.find({'enter_station': station_name}))
-
-    
-
     if routes == []:
         return
 
@@ -162,38 +140,7 @@ def analyse_one_day(station_name, path, record_dict):
 
     return tmp_dict
 
-def get_rid_of_outliers(points):
-    points = sorted(points, key=lambda x: x[1])
-    
-    print '.'*10
-    print len(points)
-    print points
-    size = len(points)
-    
-    smallest_half = points[:(size+1)/2]
-    largest_half = points[size/2:]
-    
-    if size%2 == 0:
-        lower_fourth = (smallest_half[size/4][1]+smallest_half[size/4-1][1])/2
-        upper_fourth = (largest_half[size/4][1]+largest_half[size/4-1][1])/2
-    else:
-        lower_fourth = smallest_half[size/4][1]
-        upper_fourth = largest_half[size/4][1]
-    
-    box_width = upper_fourth-lower_fourth
-    
-    print box_width, lower_fourth, upper_fourth
-    
-    lower_outlier = lower_fourth-1.5*box_width
-    upper_outlier = upper_fourth+1.5*box_width
-    
-    print lower_outlier, upper_outlier
-    
-    points = [i for i in points if i[1] < upper_outlier and i[1] > lower_outlier]
-    
-    print len(points)
-    
-    return points
+
 
 def get_sorted_points_and_recursion_curves(points):
     tmp_dict = {}
@@ -215,10 +162,7 @@ def get_sorted_points_and_recursion_curves(points):
     vec_y = []
     for i in points:
         vec_y.append([i[1]])
-    vec_y = matrix(vec_y)
-        
-        
-        
+    vec_y = matrix(vec_y)     
     matrix_x = matrix( [ [1, numpy.log(100*i[0]+1)] for i in points ] )   
     matrix_target = ((matrix_x.T)*(matrix_x)).I*(matrix_x.T)*vec_y
     x = oc.linspace(0, points[-1][0])
@@ -325,7 +269,6 @@ def show_trends(station_name):
         for path in file_paths:
             tmp_dict = analyse_one_day(station_name, path, record_dict)
             
-            #view_trend_at_one_day(tmp_dict, path)
             
             for time in tmp_dict.keys():
                 if time not in record_dict.keys():

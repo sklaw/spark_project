@@ -209,7 +209,7 @@ def get_sorted_points_and_recursion_curves(points):
 
     points = sorted(points, key=lambda x: x[0])
         
-    if len(points) <= 2:
+    if len(points) < 2:
         return None
         
     vec_y = []
@@ -279,7 +279,7 @@ def view_trend_at_times(record_dict):
        
             arg[direction].append(x)
             arg[direction].append(y)
-            arg[direction].append("-")
+            arg[direction].append(".")
         
             legend[direction].append(str(time))
             break;
@@ -292,37 +292,31 @@ def view_trend_at_times(record_dict):
         oc.plot(*(arg[direction]))
         oc.legend(*(legend[direction]))
         oc.title(direction)
-
         '''
-        oc.figure()
-        oc.plot(*(arg[direction][:8*3]))
-        oc.legend(*(legend[direction][:8]))
-        oc.title(direction)
         
-        oc.figure()
-        oc.plot(*(arg[direction][8*3:8*6]))
-        oc.legend(*(legend[direction][8:8*2]))
-        oc.title(direction)
- 
-        oc.figure()
-        oc.plot(*(arg[direction][8*6:]))
-        oc.legend(*(legend[direction][8*2:]))
-        oc.title(direction)
- 
+        size = len(legend[direction])
+        
+        for i in range(0,size,8):
+            oc.figure()
+            oc.plot(*(arg[direction][3*i:3*i+24]))
+            oc.legend(*(legend[direction][i:i+8]))
+            oc.title(direction)
+
+
    
     
     
         
 def show_trends(station_name):
-    day_types = [1, 6, 7]
+    day_types = [8, 1, 6, 7]
 
     for wday in day_types:
         if wday == 6:
             path = data_dir_path+'v0/'+station_name+'/6/*'
         elif wday == 7:
             path = data_dir_path+'v0/'+station_name+'/7/*'
-        #elif wday == 8:
-        #    path = data_dir_path+'v0/'+station_name+'/*/*'
+        elif wday == 8:
+            path = data_dir_path+'v0/'+station_name+'/holiday/*'
         else:
             path = data_dir_path+'v0/'+station_name+'/[1-5]/*'
         file_paths = glob.glob(path)

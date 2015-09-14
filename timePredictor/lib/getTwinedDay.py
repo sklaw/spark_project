@@ -9,7 +9,7 @@ import datetime
 
 import getDistance 
 
-data_dir_path = '/home/sklaw/Desktop/experiment/spark/ex/3/v1/data/'
+data_dir_path = '../../../data/'
 
 def get_possible_days(year, month, day, station):
     base_path = data_dir_path+r"v0/"
