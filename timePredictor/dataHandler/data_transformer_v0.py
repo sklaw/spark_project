@@ -4,7 +4,8 @@ import os
 
 import random
 
-data_dir_path = '/home/sklaw/Desktop/experiment/spark/ex/3/v1/data/'
+package_directory = os.path.dirname(os.path.abspath(__file__))
+data_dir_path = package_directory+'/../../../data/'
 
 def map_yearmonth(raw):
     year = int(raw[:4])

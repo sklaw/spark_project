@@ -11,9 +11,10 @@ from pymongo import MongoClient
 
 dbtalk = MongoClient("localhost:27017")
 station_names = dbtalk.IBM_contest.station_names
+metro_map = dbtalk.IBM_contest.metro_map
 
 routes_similar_to_google_map = dbtalk.IBM_contest.routes_similar_to_google_map
-routes_similar_to_google_map.drop()
+#routes_similar_to_google_map.drop()
 
 def analyse_record(record):
     routes = {}
@@ -68,7 +69,10 @@ def print_routes(routes):
                 if j[0] == '':
                     now_line = {'line':j[2], 'subroute':[]}
                 else:
-                    now_line['subroute'].append([j[1], j[3]-lib.BFS_for_metro_stations.get_possible_interchange_time(j[1][0], j[0], j[2])])
+                    previous_station = now_line['subroute'][-1][0]
+                    previous_station_arrived_time = now_line['subroute'][-1][1]
+                    previous_to_current_cost = [k[1] for k in metro_map.find_one({'station_name':previous_station})['goto'] if k[0] == j[1]][0]
+                    now_line['subroute'].append([j[1], previous_station_arrived_time+previous_to_current_cost])
                     route_by_line.append(now_line)
                     now_line = {'line':j[2], 'subroute':[]}
             now_line['subroute'].append([j[1], j[3]])
@@ -80,23 +84,19 @@ def print_routes(routes):
         print route_by_line[0]['subroute'][0], '->', route_by_line[-1]['subroute'][-1]
 
         
-        routes_similar_to_google_map.insert({'enter_station': route_by_line[0]['subroute'][0][0], 'exit_station': route_by_line[-1]['subroute'][-1][0], 'route_by_line': route_by_line})
+        #routes_similar_to_google_map.insert({'enter_station': route_by_line[0]['subroute'][0][0], 'exit_station': route_by_line[-1]['subroute'][-1][0], 'route_by_line': route_by_line})
         
         for j in route_by_line:
             print '*'*10
             print j['line'],j['subroute']
             
-interchange_time = 8
-def get_possible_interchange_time(station, arrived_platform, depart_platform):
-    if arrived_platform != depart_platform:
-        return interchange_time
-    else:
-        return 0
+
+
 
 if __name__ == "__main__":
     stations = station_names.find()[0]['data']
     for station in stations:
-        record = lib.BFS_for_metro_stations.BFS_runner(station, get_possible_interchange_time)
+        record = lib.BFS_for_metro_stations.BFS_runner(station)
         if record != {}:
             routes = analyse_record(record)
             print_routes(routes)

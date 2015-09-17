@@ -31,11 +31,6 @@ def map_quarter_interval(raw):
     
     return time
     
-def map_is_holiday(raw):
-    if raw == 'No':
-        return 0
-    else:
-        return 1
 
 def pre_process(line):
     global mapping
@@ -48,9 +43,6 @@ def pre_process(line):
     
     day = 1
     wday = map_serveice_type( elem_list[mapping["Ent Date Service Type"]] )
-    
-    is_holiday = map_is_holiday( elem_list[mapping["Ent Date Holiday"]] )
-    
     if wday == 1:
         day = 3
     elif wday == 6:
@@ -63,13 +55,11 @@ def pre_process(line):
     #2 -- month
     #3 -- day
     #4 -- serveice type
-    #5 -- is holiday
     key = [elem_list[mapping["Ent Station"]],\
            year,\
            month,\
            day,\
-           wday,\
-           is_holiday\
+           wday\
            ]
     
     #0 -- Ext Station 
@@ -88,11 +78,7 @@ def pre_process(line):
 
 
 #elem = ( (key) (data_list) )
-
-dont_fake = []
-
 def output_by_station(elem):
-    global dont_fake
     key = elem[0]
     data_list = elem[1]
     
@@ -102,25 +88,6 @@ def output_by_station(elem):
     year = key[1]
     month = key[2]
     
-    
-    
-    #holiday got
-    if key[5] == 1:
-        day = key[3]
-        path = data_dir_path+"v0/"+key[0]+'/holiday';
-        if not os.path.exists(path):
-            os.makedirs(path)
-        dont_fake.append( (year, month, day) )
-        
-        filename = str(year)+'-'+str(month)+'-'+str(day)
-        
-        f = open(path+'/'+filename, 'a')
-        
-        for k in data_list:
-            s = ','.join([l for l in k])
-            f.write(s+'\n')
-        f.close()
-            
     if key[4] == 1:
         for i in range(5):
             path = data_dir_path+"v0/"+key[0]+'/'+str(i+1);

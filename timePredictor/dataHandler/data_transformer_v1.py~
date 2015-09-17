@@ -166,7 +166,7 @@ def fake_data(year, month, day, data_list, path):
         #k is a tuple
         for k in data_list:
             vibration_1 = random.uniform(0.9, 1.1)
-            vibration_2 = random.uniform(0.95, 1.05)
+            vibration_2 = vibration_1
             
             hour = k[1]/100
             minute = k[1]%100+offset

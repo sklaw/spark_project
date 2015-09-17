@@ -1,7 +1,9 @@
 from pyspark import SparkContext, SparkConf
 from pyspark.streaming import StreamingContext
 
-data_dir_path = '../../../data/'
+import os
+package_directory = os.path.dirname(os.path.abspath(__file__))
+data_dir_path = package_directory+'/../../../data/'
 
 conf = SparkConf().setMaster("localhost")
 sc = SparkContext("local[*]", "data_transformer")
@@ -18,7 +20,7 @@ from pymongo import MongoClient
 dbtalk = MongoClient("localhost:27017")
 
 entrance_delay_function_parameter = dbtalk.IBM_contest.entrance_delay_function_parameter
-entrance_delay_function_parameter.drop()
+#entrance_delay_function_parameter.drop()
 
 station_names = dbtalk.IBM_contest.station_names
 stations = station_names.find()[0]['data']
@@ -26,38 +28,19 @@ stations = station_names.find()[0]['data']
 station_destinations_by_directions = dbtalk.IBM_contest.station_destinations_by_directions
 routes_similar_to_google_map = dbtalk.IBM_contest.routes_similar_to_google_map
 
-def ext_station_to_direction_map_func_gen(destinations_by_directions):
-    def func(item):
-        ext_station = item[0]
-        direction = None
-        for i in destinations_by_directions:
-            if ext_station in i[1]:
-                direction = i[0]
-                break;
-        
-        return ((direction),(item[1]))
-    return func
 
-def get_C1(station_name, RDD_of_one_day_at_one_time):
-    station_info = station_destinations_by_directions.find_one({"station_name":station_name})
-    if station_info == None:
-        return None
-    destinations_by_directions = station_info['destinations_by_directions']
-    return RDD_of_one_day_at_one_time.map(ext_station_to_direction_map_func_gen(destinations_by_directions)).reduceByKey(lambda a,b: a+b).filter(lambda x: x[0] != None).collect()
 
+#let time be the key
 def pre_process_1(line):
     global mapping
     elem_list = line.split(",")
     return ( ( int(elem_list[1]) ), ( elem_list[0], int(elem_list[2]), float(elem_list[3]) ) )
 
-def get_direction_by_ext_station(ext_station, destinations_by_directions):
-    for i in destinations_by_directions:
-        if ext_station in i[1]:
-            return i[0]
-    return None
+
 
 
 def map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pairs):
+    #item = (time, [ext_station, rider_sum, avg_ridership_time])
     def func(item):
         #if item[0] != 800:
         #    return;       
@@ -71,7 +54,9 @@ def map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pair
             C1_delay_pair_dict[direction] = [0,0]
             
             
+            #C1 filter here
             C1 = [j[1] for j in data if j[0] in destinations]
+            
             if C1 == []:
                 continue      
             C1 = reduce(lambda a,b: a+b, C1)
@@ -93,11 +78,10 @@ def map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pair
         return (time,C1_delay_pair_dict)     
     return func
     
-def get_pure_routes(routes):
-    l = [(i['exit_station'], i['route_by_line'][-1]['subroute'][-1][1]) for i in routes if len(i['route_by_line']) == 1]
+def get_pure_routes_pairs(routes):
     tmp_dict = {}
-    for i in l:
-        tmp_dict[i[0]] = i[1]
+    for i in routes:
+        tmp_dict[i['exit_station']] = i['route_by_line'][-1]['subroute'][-1][1]
     return tmp_dict
 
 
@@ -109,15 +93,19 @@ def analyse_one_day(station_name, path, record_dict):
     if station_info == None:
         return tmp_dict
     destinations_by_directions = station_info['destinations_by_directions']
-    routes = list(routes_similar_to_google_map.find({'enter_station': station_name}))
+    routes = list(routes_similar_to_google_map.find({"$and":[{'enter_station': station_name}, {'route_by_line':{"$size":1}}]}))
     if routes == []:
         return tmp_dict
     
     #pairs --> (exit_station, standard_time)
-    pure_routes_pairs = get_pure_routes(routes)
+    pure_routes_pairs = get_pure_routes_pairs(routes)
+    
     file_data = sc.textFile(path)
     func = map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pairs)
-    C1_delay_pairs_of_one_day = file_data.map(pre_process_1).groupByKey().map(func).collect()
+    C1_delay_pairs_of_one_day = file_data.map(pre_process_1).groupByKey().collect()
+    
+    for item in C1_delay_pairs_of_one_day:
+        func(item)
 
     for i in C1_delay_pairs_of_one_day:
         if i == None:
@@ -161,7 +149,7 @@ def set_parameter_with_station_direction_time_wday(record_dict, station_name, da
             if parameters == None:
                 continue
             #print station_name, time, direction, day_type, parameters
-            entrance_delay_function_parameter.insert({"station_name":station_name, "time":time, "direction":direction, "day_type":day_type, "parameters":parameters})
+            #entrance_delay_function_parameter.insert({"station_name":station_name, "time":time, "direction":direction, "day_type":day_type, "parameters":parameters})
        
 
 

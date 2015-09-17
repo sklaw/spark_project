@@ -9,7 +9,8 @@ import datetime
 
 import getDistance 
 
-data_dir_path = '../../../data/'
+package_directory = os.path.dirname(os.path.abspath(__file__))
+data_dir_path = package_directory+'/../../../data/'
 
 def get_possible_days(year, month, day, station):
     base_path = data_dir_path+r"v0/"
@@ -28,24 +29,32 @@ def get_twined_day(year, month, day, station, sc):
     now = datetime.datetime.now()
     
     twined_day = None
+    twined_offset = None
     min_distance = None
+    
     
     to_print = []
     
     #if year == now.year and month == now.month and day == now.day:
     if True:
         real_time_data = stream_handler.root.get_ent_data(station)
+	#print real_time_data
         for i in possible_days:
-            offset, distance =  getDistance.cmp_two_days(real_time_data , i, sc)
-            to_print.append([i.split('/')[-1], distance])
+            offset, distance =  getDistance.cmp_two_days(i, real_time_data, sc)
+            
+            print i, offset, distance
+            
+            if offset == None:
+            	continue
+            
             if min_distance == None or distance < min_distance:
-                twined_day = i.split('/')[-1]
+                twined_day = i
                 min_distance = distance
+                twined_offset = offset
 
-    else:
-        twined_day = possible_days[-1]
-        
-    return (twined_day, to_print)
+    
+    
+    return [[twined_day, twined_offset, min_distance] , possible_days]
 
     
     

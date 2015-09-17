@@ -92,6 +92,8 @@ def BFS(current_nodes):
             
         for current_platform_to_depart in platforms_on_current_to_next:
             for current_platform_arrived in record[current_node]['info_by_platforms'].keys():
+                if record[current_node]['info_by_platforms'][current_platform_to_depart]['cost'] == 0:
+                    record[current_node]['info_by_platforms'][current_platform_to_depart]['cost'] = 6
                 origin_to_next_ideal_cost = record[current_node]['info_by_platforms'][current_platform_to_depart]['cost']+current_to_next_ideal_cost
                 try_to_mark(current_platform_arrived, current_platform_to_depart, origin_to_next_ideal_cost, current_node, next_node, current_nodes)
 
