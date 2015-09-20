@@ -72,10 +72,9 @@ class MyService(rpyc.Service):
 def updateFunction(newValues, runningCount):
     if runningCount is None:
        runningCount = 0
-    
+
     new_count =  int(newValues[0][1])
-    
-    
+
     return runningCount+new_count
     
 def pre_process_1(item):
@@ -98,6 +97,7 @@ def functionToCreateContext():
     
     lines = ssc.socketTextStream("localhost", 9999)
     
+    #meat
     lines.map(pre_process_1).updateStateByKey(updateFunction).pprint()
     
     ssc.checkpoint(checkpointDirectory)   # set checkpoint directory

@@ -39,13 +39,17 @@ def pre_process_1(line):
 
 
 
-def map_anlalyser_gen(station_name, destinations_by_directions, pure_routes_pairs):
+def map_anlalyser_gen(_station_name, _destinations_by_directions, _pure_routes_pairs):
     #item = (time, [ext_station, rider_sum, avg_ridership_time])
     def func(item):
         #if item[0] != 800:
         #    return;       
         time = item[0]
         data = list(item[1])
+        
+        station_name = str(_station_name)
+        destinations_by_directions = list(_destinations_by_directions)
+        pure_routes_pairs = dict(_pure_routes_pairs)
         
         C1_delay_pair_dict = {}
         for i in destinations_by_directions:
