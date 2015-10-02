@@ -2,31 +2,136 @@ import socket
 import random
 import time
 
+import os,sys,inspect
+package_directory = os.path.dirname(os.path.abspath(__file__))
+
+data_dir_path = package_directory+'/../../../data/'
+
+from pymongo import MongoClient
+dbtalk = MongoClient("localhost:27017")
+
+data_used_by_camera_mechine_gen = dbtalk.IBM_contest.data_used_by_camera_mechine_gen
+station_destinations_by_directions = dbtalk.IBM_contest.station_destinations_by_directions
+
+import datetime
+
 stations = ['White Flint', 'Capitol South', 'Morgan Blvd.', 'Arlington Cemetery', 'Waterfront', 'Vienna', 'Franconia-Springfield', 'Crystal City', "Prince George's Plaza", 'Forest Glen', 'Branch Avenue', 'Grosvenor', 'West Hyattsville', 'Minnesota Avenue', 'Dunn Loring', 'McPherson Square', 'Glenmont', 'Metro Center', 'Shaw-Howard University', 'Benning Road', 'Reagan Washington National Airport', 'Takoma', 'New Carrollton', 'Tenleytown-AU', 'Foggy Bottom', 'Huntington', 'Cleveland Park', 'U Street-Cardozo', 'Naylor Road', 'Brookland', 'Mt. Vernon Square-UDC', 'Farragut North', 'Georgia Avenue-Petworth', 'Gallery Place-Chinatown', 'Stadium-Armory', 'Wiehle', 'Potomac Avenue', 'Braddock Road', 'East Falls Church', 'Wheaton', 'Spring Hill', 'Archives-Navy Memorial', 'Court House', 'Virginia Square-GMU', 'King Street', 'Congress Heights', 'Pentagon City', 'Landover', 'Cheverly', 'Woodley Park-Zoo', 'Farragut West', 'Bethesda', 'Columbia Heights', 'Greenbelt', 'Van Ness-UDC', 'Addison Road', 'Silver Spring', 'Navy Yard', 'Largo Town Center', 'Dupont Circle', 'McLean', 'Tysons Corner', 'Friendship Heights', 'Twinbrook', 'Smithsonian', 'Medical Center', 'Ballston', 'Suitland', 'Rhode Island Avenue', 'Van Dorn Street', 'Federal Center SW', 'Eastern Market', "L'Enfant Plaza", 'Deanwood', 'Rockville', 'College Park-U of MD', 'Capitol Heights', 'Greensboro', 'Union Station', 'Shady Grove', 'Judiciary Square', 'Federal Triangle', 'New York Ave', 'Clarendon', 'Anacostia', 'Southern Avenue', 'West Falls Church', 'Pentagon', 'Rosslyn', 'Fort Totten', 'Eisenhower Avenue']
 
+def pre_process_1(line):
+    global mapping
+    elem_list = line.split(",")
+    return ( ( int(elem_list[1]) ), ( elem_list[0], int(elem_list[2]) ) )
+
+def map_anlalyser_gen(_station_name, _destinations_by_directions):
+    #item = (time, [ext_station, rider_sum])
+    def func(item):
+        time = item[0]
+        data = list(item[1])
+        
+        station_name = str(_station_name)
+        destinations_by_directions = list(_destinations_by_directions)
+        
+        
+        C1_delay_pair_dict = {}
+        for i in destinations_by_directions:
+            direction = i[0]
+            destinations = i[1]
+            
+            #C1 filter here
+            C1 = [j[1] for j in data if j[0] in destinations]
+            
+            if C1 == []:
+                continue
+            C1 = reduce(lambda a,b: a+b, C1)
+            C1_delay_pair_dict[direction] = C1
+        return (time, C1_delay_pair_dict)    
+    return func
 
 
-
-
-
-host = "localhost"
-port = 9999
-soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-soc.bind((host, port))
-soc.listen(1)
-conn, addr = soc.accept()
-
-random.seed()
-
-while(1):
-    print 'send one'
-    for i in stations:
-    	ent_count = random.randint(1,1000)
-    	ext_count = random.randint(1,1000)
-    	
-    	conn.send(i+','+\
-              	  str(ent_count)+','+\
-              	  str(ext_count)+'\n')
-    	break;
+def save_data_to_db():
     
-    time.sleep(1)
+    from pyspark import SparkContext, SparkConf
+    from pyspark.streaming import StreamingContext
+
+    conf = SparkConf().setMaster("localhost")
+    sc = SparkContext("local[*]", "camera_mechine_gen")
+    sc.setLogLevel("WARN")
+
+    data_used_by_camera_mechine_gen.drop()
+    path = '/3/2014-10-15'
+
+
+    for station in stations:
+        station_info = station_destinations_by_directions.find_one({"station_name":station})
+        if station_info == None:
+            continue
+        
+        destinations_by_directions = station_info['destinations_by_directions']
+    
+    
+        full_path = data_dir_path+'v0/'+station+path
+        print full_path
+        func = map_anlalyser_gen(station, destinations_by_directions)
+        
+        
+        file_data = sc.textFile(full_path).map(pre_process_1).groupByKey().map(func).collect()
+        
+        for i in sorted(file_data, key=lambda x:x[0]):
+            time = i[0]
+            C1_by_directions = list(i[1].iteritems())
+            
+            #print station, time, C1_by_directions
+            data_used_by_camera_mechine_gen.insert({'station_name':station, 'time':time, 'C1_by_directions':C1_by_directions})
+
+if __name__ == "__main__":
+    #save_data_to_db()
+    
+    host = "localhost"
+    port = 9998
+    soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    soc.bind((host, port))
+    soc.listen(1)
+    conn, addr = soc.accept()
+    
+    now_time = datetime.datetime(2015,9,16,12,0)
+    
+    count_dict = {}
+    
+    while True:
+        for i in stations:
+            int_time = now_time.hour*100+now_time.minute
+        
+            int_time_to_query = now_time.hour*100+15*int(now_time.minute/15)    
+            
+            C1s_at_a_time =  data_used_by_camera_mechine_gen.find_one({'station_name':i, 'time':int_time_to_query})
+        
+            if C1s_at_a_time == None:
+                continue
+            
+            
+            if i not in count_dict.keys():
+                count_dict[i] = {}
+            
+            
+            for j in C1s_at_a_time['C1_by_directions']:
+                
+                
+                if j[0] not in count_dict[i].keys():
+                	count_dict[i][j[0]] = 0
+                
+                acc = float(j[1])/15
+                count_dict[i][j[0]] += acc
+                
+                conn.send(i+','+j[0]+','+str(int_time)+','+str(count_dict[i][j[0]])+'\n')
+                #print (i+','+j[0]+','+str(int_time)+','+str(count_dict[i][j[0]])+'\n')
+        
+        
+        print now_time
+        
+        print int_time_to_query
+        
+        now_time += datetime.timedelta(minutes=1)
+        
+        time.sleep(1)
+        
+    

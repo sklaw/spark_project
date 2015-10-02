@@ -45,7 +45,8 @@ def save_data_to_db():
 
 
 if __name__ == "__main__":
-
+    
+    
     host = "localhost"
     port = 9999
     soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -53,37 +54,41 @@ if __name__ == "__main__":
     soc.listen(1)
     conn, addr = soc.accept()
     
+    
     count_dict = {}
     
-    now_time = datetime.datetime(2015,9,16,0,0)
+    now_time = datetime.datetime(2015,9,16,12,0)
     
     while True:
         for i in stations:
             int_time = now_time.hour*100+now_time.minute
         
-            data_used_by_ticket_mechine_gen.find
-        
             if i not in count_dict.keys():
                 count_dict[i] = 0
             
-            int_time_to_query = 15*int(int_time/15)    
+            int_time_to_query = now_time.hour*100+15*int(now_time.minute/15)    
             
-            acc =  data_used_by_ticket_mechine_gen.find_one({'station_name':i, 'time':int_time})
+            acc =  data_used_by_ticket_mechine_gen.find_one({'station_name':i, 'time':int_time_to_query})
         
             if acc == None:
                 acc = 0
             else:
-                acc = acc['data']/15
+                acc = float(acc['data'])/15
         
-    	    count_dict[i] += acc
+            count_dict[i] += acc
 
-            print 'sent'
+            
 
-    	    conn.send(i+','+str(int_time)+','+str(count_dict[i])+'\n')
+            conn.send(i+','+str(int_time)+','+str(count_dict[i])+'\n')
+            #print i+','+str(int_time)+','+str(count_dict[i])+'\n'
+        
+        print now_time
+        
+        print int_time_to_query
         
         now_time += datetime.timedelta(minutes=1)
         
-        time.sleep(10)
+        time.sleep(1)
         
 
         
