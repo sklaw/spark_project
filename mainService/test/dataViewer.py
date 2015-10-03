@@ -24,9 +24,9 @@ def draw(path):
     oc.plot([i[0] for i in data], [i[1] for i in data])
 
 if __name__ == "__main__":
-    draw(data_dir_path+r"v0/Addison Road/1/2014-10-6")
-    draw(data_dir_path+r"v0/Addison Road/1/2014-10-13")
-    draw(data_dir_path+r"v0/Addison Road/1/2014-10-20")
-    draw(data_dir_path+r"v0/Addison Road/1/2014-10-27")
+    draw(data_dir_path+r"v0/Eisenhower Avenue/3/2014-10-15")
+    #draw(data_dir_path+r"v0/Addison Road/1/2014-10-13")
+    #draw(data_dir_path+r"v0/Addison Road/1/2014-10-20")
+    #draw(data_dir_path+r"v0/Addison Road/1/2014-10-27")
     
     raw_input()

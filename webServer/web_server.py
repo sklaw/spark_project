@@ -1,0 +1,56 @@
+import os.path
+
+import tornado.httpserver
+import tornado.ioloop
+import tornado.options
+import tornado.web
+
+import rpyc
+main_service = rpyc.connect("localhost", 18861)
+
+import json
+
+import copy
+
+from tornado.options import define, options
+define("port", default=8000, help="run on the given port", type=int)
+
+class IndexHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('index.html')
+
+class PoemPageHandler(tornado.web.RequestHandler):
+    def post(self):
+        year = int(self.get_argument('year'))
+        month = int(self.get_argument('month'))
+        day = int(self.get_argument('day'))
+        hour = int(self.get_argument('hour'))
+        minute = int(self.get_argument('minute'))
+        station_a = self.get_argument('station_a')
+        station_b = self.get_argument('station_b')
+        
+        #to get the predicting time from main_service
+        result = copy.deepcopy(main_service.root.get_route_with_time(year, month, day, hour, minute, station_a, station_b))
+        
+        self.write(json.dumps(result))
+        self.finish()
+        
+
+class PeopleCountWithTrafficWarning(tornado.web.RequestHandler):
+    def get(self):
+        result = copy.deepcopy(main_service.root.get_people_count_with_traffic_warning())
+        
+        self.write(json.dumps(result))
+        self.finish()
+
+if __name__ == '__main__':
+    #tornado.options.parse_command_line()
+    app = tornado.web.Application(
+        handlers=[(r'/', IndexHandler),\
+                    (r'/service1', PoemPageHandler),\
+                    (r'/service2', PeopleCountWithTrafficWarning)],
+        template_path=os.path.join(os.path.dirname(__file__), "templates")
+    )
+    http_server = tornado.httpserver.HTTPServer(app)
+    http_server.listen(options.port)
+    tornado.ioloop.IOLoop.instance().start()

@@ -47,11 +47,11 @@ def try_match(day1, day2):
     #day1[x1+i] cmp to day2[x2]
     oc.figure()
     for i in offset_list:
-        if (i < 0):
-            now_x1 = x1
-            now_x2 = x2-i
-        else:
-            now_x1 = x1+i
+        now_x1 = x1
+        now_x2 = x2+i
+        
+        if now_x2 < 0 or now_x2 >= len(day2):
+            now_x1 = x1-i
             now_x2 = x2
         
     
@@ -94,7 +94,7 @@ def get_distance_test(path_1, path_2):
     
     
 if __name__ == "__main__":
-    get_distance_test(data_dir_path+r"v0/Addison Road/1/2014-10-6",\
-                      data_dir_path+r"v0/Addison Road/1/2014-10-13"\
+    get_distance_test(data_dir_path+r"v0/Eisenhower Avenue/3/2014-10-29",\
+                      data_dir_path+r"v0/Eisenhower Avenue/3/2014-10-15"\
                       )
     raw_input()

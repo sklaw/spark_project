@@ -1,6 +1,6 @@
 import os,sys,inspect
 package_directory = os.path.dirname(os.path.abspath(__file__))
-lib_dir = package_directory+'/../../timePredictor/lib'
+lib_dir = package_directory+'/../../mainService/lib'
 
 
 sys.path.insert(0,lib_dir)

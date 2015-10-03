@@ -50,6 +50,9 @@ class MyService(rpyc.Service):
         
         return return_l
 
+    def exposed_get_ticket_mechine_data_dict(self):
+        return ticket_mechine_data_dict
+
 
     def get_question(self):  # while this method is not exposed
         return "what is the airspeed velocity of an unladen swallow?"
@@ -149,7 +152,8 @@ def ticket_mechine_RDD_handler(rdd):
 
     
     print '+'*20
-    print sorted(list(ticket_mechine_data_dict.iteritems()), key=lambda x:x[0])[0]
+    to_print = sorted(list(ticket_mechine_data_dict.iteritems()), key=lambda x:x[0])[0]
+    print sorted(list(to_print[1].iteritems()), key=lambda x:x[0])
     
 def updateFunction(newValues, oldValues):
     if oldValues is None:
@@ -169,8 +173,11 @@ def updateFunction(newValues, oldValues):
             recent_period_begin = oldValues[-1][0]
         else:
             recent_period_begin = -15
+        
+        period_end = recent_period_begin+15
+        
 
-        if time >= (recent_period_begin+15)%2360:
+        if time >= period_end or time == 0:
             time = (time/100)*100+((time%100)/15)*15
             tmp_l = [time, 0, 0, date]
             if len(oldValues) != 0:
@@ -220,7 +227,7 @@ def functionToCreateContext():
     
 def threaded_function(arg):
     from rpyc.utils.server import ThreadedServer
-    t = ThreadedServer(MyService, port = 18862)
+    t = ThreadedServer(MyService, port = 18862, protocol_config = {"allow_all_attrs" : True})
     t.start()
 
 if __name__ == "__main__":
