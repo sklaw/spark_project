@@ -73,13 +73,13 @@ if __name__ == "__main__":
             if acc == None:
                 acc = 0
             else:
-                acc = acc['data']/15
+                acc = float(acc['data'])/15
         
             count_dict[i] += acc
 
             
 
-            conn.send(i+','+str(int_time)+','+str(count_dict[i])+'\n')
+            conn.send(i+','+str(int_time)+','+str(count_dict[i])+','+str(now_time.date())+'\n')
             #print i+','+str(int_time)+','+str(count_dict[i])+'\n'
         
         print now_time

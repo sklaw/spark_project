@@ -1,0 +1,4 @@
+import rpyc
+stream_handler = rpyc.connect("localhost", 18862)
+stream_handler.root.get_camera_mechine_data('Addison Road', 'Capitol Heights')
+

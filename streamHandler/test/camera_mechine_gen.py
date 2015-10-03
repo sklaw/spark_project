@@ -93,7 +93,7 @@ if __name__ == "__main__":
     soc.listen(1)
     conn, addr = soc.accept()
     
-    now_time = datetime.datetime(2015,9,16,12,0)
+    now_time = datetime.datetime(2015,9,16,23,0)
     
     count_dict = {}
     
@@ -122,7 +122,7 @@ if __name__ == "__main__":
                 acc = float(j[1])/15
                 count_dict[i][j[0]] += acc
                 
-                conn.send(i+','+j[0]+','+str(int_time)+','+str(count_dict[i][j[0]])+'\n')
+                conn.send(i+','+j[0]+','+str(int_time)+','+str(count_dict[i][j[0]])+','+str(now_time.date())+'\n')
                 #print (i+','+j[0]+','+str(int_time)+','+str(count_dict[i][j[0]])+'\n')
         
         
