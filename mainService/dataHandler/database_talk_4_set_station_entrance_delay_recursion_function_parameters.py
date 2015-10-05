@@ -151,6 +151,7 @@ def set_parameter_with_station_direction_time_wday(record_dict, station_name, da
     bag_info = []
     for time in sorted(record_dict.keys()):
         for direction in record_dict[time].keys():
+            '''
             #GPU part
             points = record_dict[time][direction]
             tmp_dict = {}
@@ -181,15 +182,15 @@ def set_parameter_with_station_direction_time_wday(record_dict, station_name, da
             query_amount += 1
             row_info.append(len(matrix_x))
             bag_info.append((station_name, time, direction))
-                
+            ''' 
                     
-            '''
+            #origin part
             parameters = get_parameters(record_dict[time][direction])
             if parameters == None:
                 continue
-            #print station_name, time, direction, day_type, parameters
+            print station_name, time, direction, day_type, parameters
             #entrance_delay_function_parameter.insert({"station_name":station_name, "time":time, "direction":direction, "day_type":day_type, "parameters":parameters})
-            '''
+            
 
     '''
     print fat_x
