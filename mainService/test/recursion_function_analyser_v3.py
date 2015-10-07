@@ -200,6 +200,8 @@ def view_trend_at_times(record_dict):
             legend[direction].append(str(time))
     
     oc.figure()
+    import time
+    time.sleep(3)
     j = 1
     for direction in arg.keys():
     

@@ -10,7 +10,10 @@ import rpyc
 
 import datetime
 
-checkpointDirectory = r'/home/sklaw/Desktop/experiment/spark/ex/3/v1/data/streaming_data/checkpoint_data'
+package_directory = os.path.dirname(os.path.abspath(__file__))
+data_dir_path = package_directory+'/../../data/'
+
+checkpointDirectory = data_dir_path+r'streaming_data/checkpoint_data'
 
 ticket_mechine_data_dict = {}
 camera_mechine_data_dict = {}
@@ -227,7 +230,7 @@ def functionToCreateContext():
     
 def threaded_function(arg):
     from rpyc.utils.server import ThreadedServer
-    t = ThreadedServer(MyService, port = 18862, protocol_config = {"allow_all_attrs" : True})
+    t = ThreadedServer(MyService, port = 18862, protocol_config = {"allow_all_attrs" : True, 'allow_pickle' : True})
     t.start()
 
 if __name__ == "__main__":

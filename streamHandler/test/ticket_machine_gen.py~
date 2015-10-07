@@ -57,7 +57,7 @@ if __name__ == "__main__":
     
     count_dict = {}
     
-    now_time = datetime.datetime(2015,9,16,0,0)
+    now_time = datetime.datetime(2015,9,16,23,0)
     
     while True:
         for i in stations:

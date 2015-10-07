@@ -10,6 +10,8 @@ import time
 import lib.getTwinedDay
 import lib.getDistance
 
+import copy
+
 
 sc = None
 
@@ -83,7 +85,9 @@ def get_people_count_with_traffic_warning(_sc):
     
     if result == {} or time.time() > result['update_time']+update_lapse:
         sc = _sc
-        raw_count_dict = stream_handler.root.get_ticket_mechine_data_dict()
+        raw_count_dict = copy.deepcopy(stream_handler.root.get_ticket_mechine_data_dict())
+        
+        
         for i in raw_count_dict.iteritems():
             station_name = i[0]
             count_dict = i[1]

@@ -10,7 +10,10 @@ import rpyc
 
 import datetime
 
-checkpointDirectory = r'/home/sklaw/Desktop/experiment/spark/ex/3/v1/data/streaming_data/checkpoint_data'
+package_directory = os.path.dirname(os.path.abspath(__file__))
+data_dir_path = package_directory+'/../../data/'
+
+checkpointDirectory = data_dir_path+r'streaming_data/checkpoint_data'
 
 ticket_mechine_data_dict = {}
 camera_mechine_data_dict = {}
@@ -108,8 +111,8 @@ def camera_mechine_RDD_handler(rdd):
                 camera_mechine_data_dict[station_name][direction] = {-1:j[3]}
                 camera_mechine_data_dict[station_name][direction][time] = count
 
-    print '-'*20
-    print sorted(list(camera_mechine_data_dict.iteritems()), key=lambda x:x[0])[0]
+    #print '-'*20
+    #print sorted(list(camera_mechine_data_dict.iteritems()), key=lambda x:x[0])[0]
 
 
 
@@ -151,9 +154,9 @@ def ticket_mechine_RDD_handler(rdd):
                 ticket_mechine_data_dict[station_name][time] = count
 
     
-    print '+'*20
-    to_print = sorted(list(ticket_mechine_data_dict.iteritems()), key=lambda x:x[0])[0]
-    print sorted(list(to_print[1].iteritems()), key=lambda x:x[0])
+    #print '+'*20
+    #to_print = sorted(list(ticket_mechine_data_dict.iteritems()), key=lambda x:x[0])[0]
+    #print sorted(list(to_print[1].iteritems()), key=lambda x:x[0])
     
 def updateFunction(newValues, oldValues):
     if oldValues is None:
@@ -217,8 +220,8 @@ def functionToCreateContext():
     
     
     #meat
-    data_from_ticket_mechine.map(ticket_mechine_pre_process).updateStateByKey(updateFunction).foreachRDD(ticket_mechine_RDD_handler)
-    data_from_camera_mechine.map(camera_mechine_pre_process).updateStateByKey(updateFunction).foreachRDD(camera_mechine_RDD_handler)
+    data_from_ticket_mechine.map(ticket_mechine_pre_process).updateStateByKey(updateFunction).foreachRDD(ticket_mechine_RDD_handler).pprint()
+    data_from_camera_mechine.map(camera_mechine_pre_process).updateStateByKey(updateFunction).foreachRDD(camera_mechine_RDD_handler).pprint()
     
     ssc.checkpoint(checkpointDirectory)   # set checkpoint directory
     return ssc
@@ -227,7 +230,7 @@ def functionToCreateContext():
     
 def threaded_function(arg):
     from rpyc.utils.server import ThreadedServer
-    t = ThreadedServer(MyService, port = 18862, protocol_config = {"allow_all_attrs" : True})
+    t = ThreadedServer(MyService, port = 18862, protocol_config = {"allow_all_attrs" : True, 'allow_pickle' : True})
     t.start()
 
 if __name__ == "__main__":

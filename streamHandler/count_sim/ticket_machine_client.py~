@@ -47,12 +47,10 @@ def save_data_to_db():
 if __name__ == "__main__":
     
     
-    host = "172.16.9.35"
-    port = 9999
-    soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    soc.bind((host, port))
-    soc.listen(1)
-    conn, addr = soc.accept()
+    host = "localhost"
+    port = 19999
+    
+
     
     
     count_dict = {}
@@ -78,9 +76,11 @@ if __name__ == "__main__":
             count_dict[i] += acc
 
             
-
-            conn.send(i+','+str(int_time)+','+str(count_dict[i])+','+str(now_time.date())+'\n')
+			soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    		soc.connect((host, port))
+            soc.send(i+','+str(int_time)+','+str(count_dict[i])+','+str(now_time.date())+'\n')
             #print i+','+str(int_time)+','+str(count_dict[i])+'\n'
+            soc.close()
         
         print now_time
         
