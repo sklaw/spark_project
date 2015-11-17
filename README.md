@@ -1,0 +1,1 @@
+This is a project that uses Apache Spark to analyze Metro ridership data and makes predictions on Metro travel time. The predictions are based on the history passenger ridership data, which will reflect some extra time cost when the Metro system becomes crowded.
